@@ -5,106 +5,266 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ge Lee</title>
 
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@600;700&family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header>
-    <h1>Ge LEE</h1>
-  </header>
+  <div class="layout-wrapper">
+    <header class="sidebar">
+      <img src="assets/images/img.webp" alt="Ge Lee" class="profile-img">
+      
+      <h1>Ge Lee <span class="c-name">李格</span></h1>
+      
+      <div class="sidebar-email">
+        <p>ge.lee@uq.edu.au</p>
+      </div>
 
-  <section class="about-section">
-  <h2>About</h2>
-    <p>
-      I am a PhD candidate in Computer Science at the School of Computing Technologies, RMIT University, Australia. 
-      I am supervised by 
-      <a href="https://baozhifeng.net" target="_blank">Prof. Zhifeng Bao</a>, 
-      <a href="https://about.uq.edu.au/experts/41331" target="_blank">Prof. Shane Culpepper</a>
-      and <a href="https://shixunh.io" target="_blank">Dr. Shixun Huang</a>.
-    </p>
-    <p>
-    My research explores the intersection of databases and machine learning, with a particular focus on data management and data preparation.
-    I aim to develop practical, efficient, and cost-effective solutions that enhance the accessibility and quality of data for real-world applications.
-    </p>
-    <p><strong>Contact –</strong> ge.lee [at] student.rmit.edu.au</p>
-  </section>
+      <div class="sidebar-links">
+        <a href="https://scholar.google.com/citations?user=FhEizHsAAAAJ" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i></a>
+        <a href="https://dblp.org/pid/375/0279.html" aria-label="DBLP Profile" target="_blank" rel="noopener noreferrer"><i class="ai ai-dblp"></i></a>
+        <a href="https://github.com/g4ge" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ge-lee/" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#biography" class="active">Biography</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#teaching">Teaching</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#awards">Honours & Awards</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <section>
-    <h2>Research Interests</h2>
-    <p>Data Management, Data Preparation, Machine Learning</p>
-  </section>
+    <main class="content">
+      <section id="biography" class="biography-section">
+        <h2>Biography</h2>
+        <p class="tagline">Autonomous Data Systems&nbsp;&middot;&nbsp;Semantic Processing&nbsp;&middot;&nbsp;Cost-Aware</p>
+        <p>
+          I am a PhD candidate in Computer Science at RMIT University, supervised by
+          <a href="https://baozhifeng.net" target="_blank" rel="noopener noreferrer">Prof. Zhifeng Bao</a> and
+          <a href="https://shixunh.io" target="_blank" rel="noopener noreferrer">Dr. Shixun Huang</a>.
+          Alongside RMIT, I work with
+          <a href="https://people.csiro.au/Z/Y/Yanchang-Zhao" target="_blank" rel="noopener noreferrer">Dr. Yanchang Zhao</a>
+          at CSIRO Data61 and I am currently a visiting researcher in the Data Science discipline at The University of Queensland.
+        </p>
+        <p>
+          AI is moving fast, but real deployments still start with the same bottleneck&mdash;<strong>data</strong>.
+          The hard part is rarely the model. 
+          It is finding the right sources, understanding what they really contain, fixing quality issues, and stitching pieces together into something a model, or a decision, can rely on. 
+        </p>
+        <p>
+          My research sits at the intersection of modern database systems and AI and machine learning.
+          I develop agentic workflows for data preparation and management over uncurated data.
+          This includes profiling raw assets, semantically discovering what is relevant, and assembling and integrating across heterogeneous sources.
+          I am working toward more autonomous database capabilities where data management is dependable under real budgets.
+          That means <strong>fast</strong> enough to use (time and latency), <strong>affordable</strong> enough to run (monetary cost and computing resources), and <strong>reliable</strong> enough to trust (traceable evidence and error bounds).
+        </p>
+      </section>
 
-  <section>
-    <h2>Publications</h2>
-    <ul>
-      <li>
-        <strong>Ge Lee</strong>, Shixun Huang, Zhifeng Bao, and Yanchang Zhao.<br>
-        <em>Representative Time Series Discovery for Data Exploration.</em><br>
-        VLDB 2025 (CORE A*)<br>
-        [<a href="https://dl.acm.org/doi/10.14778/3712221.3712252" target="_blank">PDF</a>] [<a href="https://github.com/rmitbggroup/RTSD" target="_blank">code</a>]
-      </li>
-      <li>
-        Shixun Huang, <strong>Ge Lee</strong>, Zhifeng Bao, and Shirui Pan.<br>
-        <em>Cost-effective Data Labelling for Graph Neural Networks.</em><br>
-        WWW 2024 (CORE A*)<br>
-        [<a href="https://dl.acm.org/doi/10.1145/3589334.3645339" target="_blank">PDF</a>] [<a href="https://github.com/rmitbggroup/AL-Greedy" target="_blank">code</a>]
-      </li>
-    </ul>
-  </section>
+      <section id="research">
+        <h2>Research</h2>
+        <div class="timeline">
+          
+          <div class="timeline-item">
+            <div class="timeline-year">2026</div>
+            <div class="timeline-content">
+              <ul class="research-list">
+                <li>
+                  <div class="pub-title">Shape-Agnostic Table Overlap Discovery: A Maximum Common Subhypergraph Approach</div>
+                  <div class="pub-authors"><strong>Ge Lee</strong>, Shixun Huang, Zhifeng Bao, Felix Naumann, Shazia Sadiq, and Yanchang Zhao</div>
+                  <div class="pub-actions">
+                    <span class="venue-tag">SIGMOD'26</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="pub-title">AgenticScholar: Agentic Data Management with Pipeline Orchestration for Scholarly Corpora</div>
+                  <div class="pub-authors">Hai Lan, Tingting Wang, Zhifeng Bao, Guoliang Li, Daomin Ji, <strong>Ge Lee</strong>, Feng Luo, Zi Huang, Hailang Qiu, and Gang Hua</div>
+                  <div class="pub-actions">
+                    <span class="venue-tag">SIGMOD'26</span>
+                    <a href="https://agenticscholar.github.io/index.html" class="pub-link demo-btn" target="_blank" rel="noopener noreferrer">Live Demo<span class="arrow-wrap"><i class="fa-solid fa-arrow-right"></i></span></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>Doctor of Philosophy (PhD), Computer Science</strong><br>
-        <em>2023 – present</em><br>
-        Royal Melbourne Institute of Technology (RMIT), Australia
-      </li>
-      <li>
-        <strong>Bachelor of Science (Honours), Computer Science</strong><br>
-        <em>2022</em><br>
-        Royal Melbourne Institute of Technology (RMIT), Australia
-      </li>
-      <li>
-        <strong>Bachelor of Computer Science</strong><br>
-        <em>2019 – 2021</em><br>
-        Royal Melbourne Institute of Technology (RMIT), Australia
-      </li>
-    </ul>
-  </section>
+          <div class="timeline-item">
+            <div class="timeline-year">2025</div>
+            <div class="timeline-content">
+              <ul class="research-list">
+                <li>
+                  <div class="pub-title">Representative Time Series Discovery for Data Exploration</div>
+                  <div class="pub-authors"><strong>Ge Lee</strong>, Shixun Huang, Zhifeng Bao, and Yanchang Zhao</div>
+                  <div class="pub-actions">
+                    <span class="venue-tag">VLDB'25</span>
+                    <a href="https://dl.acm.org/doi/10.14778/3712221.3712252" class="pub-link" target="_blank" rel="noopener noreferrer">PDF</a>
+                    <a href="https://github.com/rmitbggroup/RTSD" class="pub-link" target="_blank" rel="noopener noreferrer">Code</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-  <section>
-    <h2>Service</h2>
-    <ul>
-      <li>Reviewer for KDD 2024</li>
-    </ul>
-  </section>
+          <div class="timeline-item">
+            <div class="timeline-year">2024</div>
+            <div class="timeline-content">
+              <ul class="research-list">
+                <li>
+                  <div class="pub-title">Cost-effective Data Labelling for Graph Neural Networks</div>
+                  <div class="pub-authors">Shixun Huang, <strong>Ge Lee</strong>, Zhifeng Bao, and Shirui Pan</div>
+                  <div class="pub-actions">
+                    <span class="venue-tag">WWW'24</span>
+                    <a href="https://dl.acm.org/doi/10.1145/3589334.3645339" class="pub-link" target="_blank" rel="noopener noreferrer">PDF</a>
+                    <a href="https://github.com/rmitbggroup/AL-Greedy" class="pub-link" target="_blank" rel="noopener noreferrer">Code</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-  <section>
-    <h2>Honours & Awards</h2>
-    <ul>
-      <li><strong>CSIRO Data61 Top-Up Scholarship</strong><br><em>2023 – 2026</em></li>
-      <li><strong>RMIT Vice-Chancellor's PhD Scholarship</strong><br><em>2023 – 2026</em></li>
-      <li><strong>RMIT Vice-Chancellor's List for Academic Excellence</strong><br><em>2022</em></li>
-      <li><strong>RMIT Vice-Chancellor's List for Academic Excellence</strong><br><em>2021</em></li>
-    </ul>
-  </section>
+        </div>
+      </section>
 
-  <footer>
-    <p>© 2025 Ge Lee</p>
-    <p>
-      <a href="https://www.linkedin.com/in/ge-lee/" target="_blank">LinkedIn</a> | 
-      <a href="https://github.com/g4ge" target="_blank">GitHub</a>
-    </p>
-  </footer>
+      <section id="education">
+        <h2>Education</h2>
+        <ul class="standard-list">
+          <li>
+            <strong>Doctor of Philosophy (PhD), Computer Science</strong><br>
+            <span class="list-meta">2023 &ndash; present</span>
+            <span class="list-meta">RMIT University</span>
+        </li>
+        <li>
+            <strong>Bachelor of Science (Honours), Computer Science</strong><br>
+            <span class="list-meta">2022</span>
+            <span class="list-meta">RMIT University</span>
+        </li>
+        <li>
+            <strong>Bachelor of Computer Science</strong><br>
+            <span class="list-meta">2019 &ndash; 2021</span>
+            <span class="list-meta">RMIT University</span>
+          </li>
+        </ul>
+      </section>
 
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <ul class="standard-list">
+          <li>
+            <strong>Tutor &mdash; Introduction to Information Systems (INFS7900)</strong><br>
+            <span class="list-meta">Semester 1, 2026</span>
+            <span class="list-meta">The University of Queensland</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="service">
+        <h2>Service</h2>
+        <ul class="standard-list">
+          <li>Reviewer for KDD 2024</li>
+        </ul>
+      </section>
+
+      <section id="awards">
+        <h2>Honours & Awards</h2>
+        <ul class="standard-list">
+          <li>
+              <strong>CSIRO Data61 Top-Up Scholarship</strong><br>
+              <span class="list-meta">2023 &ndash; 2026</span>
+          </li>
+          <li>
+              <strong>RMIT Vice-Chancellor's PhD Scholarship</strong><br>
+              <span class="list-meta">2023 &ndash; 2026</span>
+          </li>
+          <li>
+              <strong>RMIT Vice-Chancellor's List for Academic Excellence</strong><br>
+              <span class="list-meta">2021, 2022</span>
+          </li>
+        </ul>
+      </section>
+      
+      <footer>
+        <p>&copy; 2026 Ge Lee &nbsp;&bull;&nbsp; Last updated in March 2026</p>
+      </footer>
+    </main>
+  </div>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.sidebar-nav a');
+      
+      const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: 0
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const currentId = entry.target.getAttribute('id');
+            
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${currentId}`) {
+                link.classList.add('active');
+                
+                if (window.innerWidth <= 768) {
+                  link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                }
+              }
+            });
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+
+      window.addEventListener('scroll', () => {
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const lastLink = navLinks[navLinks.length - 1];
+          lastLink.classList.add('active');
+          
+          if (window.innerWidth <= 768) {
+            lastLink.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+          }
+        }
+      });
+
+      const backToTopBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.add('show');
+        } else {
+          backToTopBtn.classList.remove('show');
+        }
+      });
+
+      backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
