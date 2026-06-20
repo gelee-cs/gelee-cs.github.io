@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Ge Lee</title>
+  <meta name="description" content="Personal website of Ge Lee.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
@@ -12,263 +15,483 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:wght@600;700&family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="layout-wrapper">
-    <header class="sidebar">
-      <img src="assets/images/img.webp" alt="Ge Lee" class="profile-img">
-      
-      <h1>Ge Lee <span class="c-name">李格</span></h1>
-      
-      <div class="sidebar-email">
-        <p>ge.lee@uq.edu.au</p>
-      </div>
+  <main class="page">
+    <input class="tab-input" type="radio" id="tab-about" name="tab" checked>
+    <input class="tab-input" type="radio" id="tab-publications" name="tab">
+    <input class="tab-input" type="radio" id="tab-education" name="tab">
+    <input class="tab-input" type="radio" id="tab-service" name="tab">
 
-      <div class="sidebar-links">
-        <a href="https://scholar.google.com/citations?user=FhEizHsAAAAJ" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i></a>
-        <a href="https://dblp.org/pid/375/0279.html" aria-label="DBLP Profile" target="_blank" rel="noopener noreferrer"><i class="ai ai-dblp"></i></a>
-        <a href="https://github.com/g4ge" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/ge-lee/" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
-      </div>
-      
-      <nav class="sidebar-nav">
-        <ul>
-          <li><a href="#biography" class="active">Biography</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#teaching">Teaching</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#awards">Honours & Awards</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav class="tabs" aria-label="Primary">
+      <label for="tab-about">about</label>
+      <label for="tab-publications">publications</label>
+      <label for="tab-education">education/awards</label>
+      <label for="tab-service">teaching/service</label>
+    </nav>
 
-    <main class="content">
-      <section id="biography" class="biography-section">
-        <h2>Biography</h2>
-        <p class="tagline">Autonomous Data Systems&nbsp;&middot;&nbsp;Semantic Processing&nbsp;&middot;&nbsp;Cost-Aware</p>
-        <p>
-          I am a PhD candidate in Computer Science at RMIT University, supervised by
-          <a href="https://baozhifeng.net" target="_blank" rel="noopener noreferrer">Prof. Zhifeng Bao</a> and
-          <a href="https://shixunh.io" target="_blank" rel="noopener noreferrer">Dr. Shixun Huang</a>.
-          Alongside RMIT, I work with
-          <a href="https://people.csiro.au/Z/Y/Yanchang-Zhao" target="_blank" rel="noopener noreferrer">Dr. Yanchang Zhao</a>
-          at CSIRO Data61 and I am currently a visiting researcher in the Data Science discipline at The University of Queensland.
-        </p>
-        <p>
-          AI is moving fast, but real deployments still start with the same bottleneck &mdash; <strong>data</strong>.
-          The hard part is rarely the model. 
-          It is finding the right sources, understanding what they really contain, fixing quality issues, and stitching pieces together into something a model, or a decision, can rely on. 
-        </p>
-        <p>
-          My research sits at the intersection of modern database systems and AI and machine learning.
-          I develop agentic workflows for data preparation and management over uncurated data.
-          This includes profiling raw assets, semantically discovering what is relevant, and assembling and integrating across heterogeneous sources.
-          I am working toward more autonomous database capabilities where data management is dependable under real budgets.
-          That means <strong>fast</strong> enough to use (time and latency), <strong>affordable</strong> enough to run (monetary cost and computing resources), and <strong>reliable</strong> enough to trust (traceable evidence and error bounds).
-        </p>
-      </section>
+    <section class="panel panel-about">
+      <h1>Ge Lee</h1>
 
-      <section id="research">
-        <h2>Research</h2>
-        <div class="timeline">
-          
-          <div class="timeline-item">
-            <div class="timeline-year">2026</div>
-            <div class="timeline-content">
-              <ul class="research-list">
-                <li>
-                  <div class="pub-title">Shape-Agnostic Table Overlap Discovery: A Maximum Common Subhypergraph Approach</div>
-                  <div class="pub-authors"><strong>Ge Lee</strong>, Shixun Huang, Zhifeng Bao, Felix Naumann, Shazia Sadiq, and Yanchang Zhao</div>
-                  <div class="pub-actions">
-                    <span class="venue-tag">SIGMOD'26</span>
-                    <span class="new-tag">new</span>
-                  </div>
-                </li>
-                <li>
-                  <div class="pub-title">AgenticScholar: Agentic Data Management with Pipeline Orchestration for Scholarly Corpora</div>
-                  <div class="pub-authors">Hai Lan, Tingting Wang, Zhifeng Bao, Guoliang Li, Daomin Ji, <strong>Ge Lee</strong>, Feng Luo, Zi Huang, Hailang Qiu, and Gang Hua</div>
-                  <div class="pub-actions">
-                    <span class="venue-tag">SIGMOD'26</span>
-                    <span class="new-tag">new</span>
-                    <a href="https://agenticscholar.github.io/index.html" class="pub-link demo-btn" target="_blank" rel="noopener noreferrer">Live Demo<span class="arrow-wrap"><i class="fa-solid fa-arrow-right"></i></span></a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <div class="intro">
+        <img class="portrait" src="assets/images/img.webp" alt="Ge Lee">
 
-          <div class="timeline-item">
-            <div class="timeline-year">2025</div>
-            <div class="timeline-content">
-              <ul class="research-list">
-                <li>
-                  <div class="pub-title">Representative Time Series Discovery for Data Exploration</div>
-                  <div class="pub-authors"><strong>Ge Lee</strong>, Shixun Huang, Zhifeng Bao, and Yanchang Zhao</div>
-                  <div class="pub-actions">
-                    <span class="venue-tag">VLDB'25</span>
-                    <a href="https://dl.acm.org/doi/10.14778/3712221.3712252" class="pub-link" target="_blank" rel="noopener noreferrer">PDF</a>
-                    <a href="https://github.com/rmitbggroup/RTSD" class="pub-link" target="_blank" rel="noopener noreferrer">Code</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="intro-text">
+          <p>
+             <i>Ge — pronounced like the letter `g`, or `guh` as in 李格.</i>
+          </p>
 
-          <div class="timeline-item">
-            <div class="timeline-year">2024</div>
-            <div class="timeline-content">
-              <ul class="research-list">
-                <li>
-                  <div class="pub-title">Cost-effective Data Labelling for Graph Neural Networks</div>
-                  <div class="pub-authors">Shixun Huang, <strong>Ge Lee</strong>, Zhifeng Bao, and Shirui Pan</div>
-                  <div class="pub-actions">
-                    <span class="venue-tag">WWW'24</span>
-                    <a href="https://dl.acm.org/doi/10.1145/3589334.3645339" class="pub-link" target="_blank" rel="noopener noreferrer">PDF</a>
-                    <a href="https://github.com/rmitbggroup/AL-Greedy" class="pub-link" target="_blank" rel="noopener noreferrer">Code</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
+          <p>
+            I'm a PhD candidate in Computer Science&nbsp;@&nbsp;RMIT University, supervised by
+            <a href="https://baozhifeng.net" target="_blank" rel="noopener noreferrer">Prof. Zhifeng Bao</a>
+            and
+            <a href="https://shixunh.io" target="_blank" rel="noopener noreferrer">Dr. Shixun Huang</a>.
+            I also work with
+            <a href="https://people.csiro.au/Z/Y/Yanchang-Zhao" target="_blank" rel="noopener noreferrer">Dr. Yanchang Zhao</a>&nbsp;@&nbsp;CSIRO Data61,
+            and I'm currently a visiting researcher in the Data Science discipline&nbsp;@&nbsp;The University of Queensland.
+          </p>
         </div>
-      </section>
+      </div>
 
-      <section id="education">
-        <h2>Education</h2>
-        <ul class="standard-list">
-          <li>
-            <strong>Doctor of Philosophy (PhD), Computer Science</strong><br>
-            <span class="list-meta">2023 &ndash; present</span>
-            <span class="list-meta">RMIT University</span>
+      <p>
+        My research sits at the intersection of data management and machine learning.
+        I study how to make large, uncurated data collections easier to understand and work with.
+        My recent work focuses on tabular data, discovering overlap between tables for scalable retrieval and deduplication.
+        Increasingly, I am extending this toward cost-aware agentic workflows for selective and efficient data processing under practical budget and latency constraints.
+        Throughout, the aim is the same: data management that is fast enough to use, affordable enough to run, and reliable enough to trust.
+      </p>
+
+      <p class="contact">
+        ge.lee@uq.edu.au
+        <span>/</span>
+        <a href="https://scholar.google.com/citations?user=FhEizHsAAAAJ" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer">scholar</a>
+        <span>/</span>
+        <a href="https://dblp.org/pid/375/0279.html" aria-label="DBLP Profile" target="_blank" rel="noopener noreferrer">dblp</a>
+        <span>/</span>
+        <a href="https://github.com/g4ge" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer">github</a>
+        <span>/</span>
+        <a href="https://www.linkedin.com/in/ge-lee/" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">linkedin</a>
+      </p>
+    </section>
+
+    <section class="panel panel-publications">
+      <h1>Publications</h1>
+
+      <div class="publication-controls" aria-label="Publication details controls">
+        <button class="all-details-button" type="button" id="expand-all-previews">expand all</button>
+        <span class="all-details-separator" id="all-details-separator" hidden>/</span>
+        <button class="all-details-button" type="button" id="hide-all-previews" hidden>hide all</button>
+      </div>
+
+      <ol class="years">
+        <li class="year-group">
+          <span class="year">2027</span>
+
+          <ol class="papers">
+            <li>
+              <strong>Alignment-Guided Largest Table Overlap Size Estimation</strong>
+
+              <p>
+                <strong>Ge Lee</strong>, Shixun Huang, Zhifeng Bao, Shazia Sadiq, Yanchang Zhao.
+              </p>
+
+              <input class="preview-toggle" type="checkbox" id="preview-alignment">
+
+              <p class="paper-meta">
+                <em>SIGMOD 2027</em>
+                <span class="paper-links">
+                  <label class="preview-button" for="preview-alignment">
+                    <span class="preview-show">details</span>
+                    <span class="preview-hide">hide</span>
+                  </label>
+                </span>
+              </p>
+
+              <div class="paper-preview">
+                <p>
+                  Large table repositories need fast overlap estimates for blocking and query-by-table retrieval, but exact computation is too expensive and existing estimators struggle under structural variation and domain shift. This work introduces ALORE, an alignment-guided, hypergraph-based estimator that predicts table overlap size accurately and efficiently across heterogeneous repositories.
+                </p>
+
+                <div class="preview-media">
+                  <figure class="teaser">
+                    <button class="image-thumb" type="button" data-image="assets/images/alore.webp" aria-label="Open image for Alignment-Guided Largest Table Overlap Size Estimation">
+                      <img src="assets/images/alore.webp" alt="Image for Alignment-Guided Largest Table Overlap Size Estimation" loading="lazy">
+                    </button>
+                  </figure>
+
+                  <button class="video-thumb" type="button" data-video-id="VbOBG86lclY" aria-label="Open YouTube preview for Alignment-Guided Largest Table Overlap Size Estimation">
+                    <img src="https://img.youtube.com/vi/VbOBG86lclY/hqdefault.jpg" alt="" loading="lazy">
+                    <span class="video-overlay" aria-hidden="true">
+                      <span class="video-play">▶</span>
+                      <span>video</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ol>
         </li>
-        <li>
-            <strong>Bachelor of Science (Honours), Computer Science</strong><br>
-            <span class="list-meta">2022</span>
-            <span class="list-meta">RMIT University</span>
+
+        <li class="year-group">
+          <span class="year">2026</span>
+
+          <ol class="papers">
+            <li>
+              <a href="https://dl.acm.org/doi/abs/10.1145/3802108" target="_blank" rel="noopener noreferrer">Shape-Agnostic Table Overlap Discovery: A Maximum Common Subhypergraph Approach</a>
+
+              <p>
+                <strong>Ge Lee</strong>, Shixun Huang, Zhifeng Bao, Felix Naumann, Shazia Sadiq, Yanchang Zhao.
+              </p>
+
+              <input class="preview-toggle" type="checkbox" id="preview-salto">
+
+              <p class="paper-meta">
+                <em>SIGMOD 2026</em>
+                <span class="paper-links">
+                  <a href="https://arxiv.org/abs/2603.14419" target="_blank" rel="noopener noreferrer">tr</a>
+                  <span>/</span>
+                  <a href="https://github.com/DataAutonomyLab/SALTO" target="_blank" rel="noopener noreferrer">code</a>
+                  <span>/</span>
+                  <label class="preview-button" for="preview-salto">
+                    <span class="preview-show">details</span>
+                    <span class="preview-hide">hide</span>
+                  </label>
+                </span>
+              </p>
+
+              <div class="paper-preview">
+                <p>
+                  Tables often share content despite reordered rows, columns, and missing metadata, but existing rectangular overlap definition miss many valid matches. This work introduces SALTO, a shape-agnostic notion of table overlap, and HyperSplit, a hypergraph-based algorithm that finds exact cell-level overlaps efficiently for copy detection, deduplication, and version comparison.
+                </p>
+
+                <div class="preview-media">
+                  <figure class="teaser">
+                    <button class="image-thumb" type="button" data-image="assets/images/salto.webp" aria-label="Open image for Shape-Agnostic Table Overlap Discovery">
+                      <img src="assets/images/salto.webp" alt="Image for Shape-Agnostic Table Overlap Discovery" loading="lazy">
+                    </button>
+                  </figure>
+
+                  <button class="video-thumb" type="button" data-video-id="uOx-kdsJACE" aria-label="Open YouTube preview for Shape-Agnostic Table Overlap Discovery">
+                    <img src="https://img.youtube.com/vi/uOx-kdsJACE/hqdefault.jpg" alt="" loading="lazy">
+                    <span class="video-overlay" aria-hidden="true">
+                      <span class="video-play">▶</span>
+                      <span>video</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <a href="https://dl.acm.org/doi/abs/10.1145/3802008" target="_blank" rel="noopener noreferrer">AgenticScholar: Agentic Data Management with Pipeline Orchestration for Scholarly Corpora</a>
+
+              <p>
+                Hai Lan, Tingting Wang, Zhifeng Bao, Guoliang Li, Daomin Ji, <strong>Ge Lee</strong>, Feng Luo, Zi Huang, Hailang Qiu, Gang Hua.
+              </p>
+
+              <input class="preview-toggle" type="checkbox" id="preview-agenticscholar">
+
+              <p class="paper-meta">
+                <em>SIGMOD 2026</em>
+                <span class="paper-links">
+                  <a href="https://arxiv.org/abs/2603.13774" target="_blank" rel="noopener noreferrer">tr</a>
+                  <span>/</span>
+                  <a href="https://agenticscholar.github.io/index.html" target="_blank" rel="noopener noreferrer">system</a>
+                  <span>/</span>
+                  <label class="preview-button" for="preview-agenticscholar">
+                    <span class="preview-show">details</span>
+                    <span class="preview-hide">hide</span>
+                  </label>
+                </span>
+              </p>
+
+              <div class="paper-preview">
+                <p>
+                  Scholarly analysis increasingly requires reasoning across papers, where evidence is scattered across text, tables, figures, code snippets, citations, and bibliographic context, while questions evolve from retrieval into multi-step synthesis, comparison, trend tracing, and idea exploration. AgenticScholar compiles natural-language requests into evidence-grounded executable DAG workflows, supporting paper retrieval, structured extraction, cross-paper synthesis with ranking and inconsistency checking, trend analysis, milestone paper selection, and under-explored problem–method discovery. Its agentic core unifies a structure-aware scholarly knowledge base with hybrid planning and reusable operators, while exposing plans, intermediate results, and data lineage for traceability.
+                </p>
+
+                <div class="preview-media">
+                  <figure class="teaser">
+                    <button class="image-thumb" type="button" data-image="assets/images/agenticscholar.webp" aria-label="Open image for AgenticScholar">
+                      <img src="assets/images/agenticscholar.webp" alt="Image for AgenticScholar" loading="lazy">
+                    </button>
+                  </figure>
+
+                  <button class="video-thumb" type="button" data-video-id="rRzr36fhqHQ" aria-label="Open YouTube preview for AgenticScholar">
+                    <img src="https://img.youtube.com/vi/rRzr36fhqHQ/hqdefault.jpg" alt="" loading="lazy">
+                    <span class="video-overlay" aria-hidden="true">
+                      <span class="video-play">▶</span>
+                      <span>video</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ol>
         </li>
+
+        <li class="year-group">
+          <span class="year">2025</span>
+
+          <ol class="papers">
+            <li>
+              <a href="https://dl.acm.org/doi/10.14778/3712221.3712252" target="_blank" rel="noopener noreferrer">Representative Time Series Discovery for Data Exploration</a>
+
+              <p>
+                <strong>Ge Lee</strong>, Shixun Huang, Zhifeng Bao, Yanchang Zhao.
+              </p>
+
+              <input class="preview-toggle" type="checkbox" id="preview-rtsd">
+
+              <p class="paper-meta">
+                <em>VLDB 2025</em>
+                <span class="paper-links">
+                  <a href="https://github.com/rmitbggroup/RTSD" target="_blank" rel="noopener noreferrer">code</a>
+                  <span>/</span>
+                  <label class="preview-button" for="preview-rtsd">
+                    <span class="preview-show">details</span>
+                    <span class="preview-hide">hide</span>
+                  </label>
+                </span>
+              </p>
+
+              <div class="paper-preview">
+                <p>
+                  Large time series collections need compact summaries for exploration, but existing methods lack controllable similarity-bounded coverage. This work introduces RTSD, which finds the smallest set of representative time series that collectively covers a user-specified proportion of the data, and MLGreedyET, a self-supervised greedy framework that solves it with low time and memory costs.
+                </p>
+
+                <div class="preview-media">
+                  <figure class="teaser">
+                    <button class="image-thumb" type="button" data-image="assets/images/rtsd.webp" aria-label="Open image for Representative Time Series Discovery for Data Exploration">
+                      <img src="assets/images/rtsd.webp" alt="Image for Representative Time Series Discovery for Data Exploration" loading="lazy">
+                    </button>
+                  </figure>
+
+                  <button class="video-thumb" type="button" data-video-id="Az89QXhxP58" aria-label="Open YouTube preview for Representative Time Series Discovery for Data Exploration">
+                    <img src="https://img.youtube.com/vi/Az89QXhxP58/hqdefault.jpg" alt="" loading="lazy">
+                    <span class="video-overlay" aria-hidden="true">
+                      <span class="video-play">▶</span>
+                      <span>video</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </li>
+
+        <li class="year-group">
+          <span class="year">2024</span>
+
+          <ol class="papers">
+            <li>
+              <a href="https://dl.acm.org/doi/10.1145/3589334.3645339" target="_blank" rel="noopener noreferrer">Cost-effective Data Labelling for Graph Neural Networks</a>
+
+              <p>
+                Shixun Huang, <strong>Ge Lee</strong>, Zhifeng Bao, Shirui Pan.
+              </p>
+
+              <p class="paper-meta">
+                <em>WWW 2024</em>
+                <span class="paper-links">
+                  <a href="https://github.com/rmitbggroup/AL-Greedy" target="_blank" rel="noopener noreferrer">code</a>
+                </span>
+              </p>
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+
+    <section class="panel panel-education">
+      <h1>Education</h1>
+
+      <ul class="entries">
         <li>
-            <strong>Bachelor of Computer Science</strong><br>
-            <span class="list-meta">2019 &ndash; 2021</span>
-            <span class="list-meta">RMIT University</span>
-          </li>
-        </ul>
-      </section>
+          <strong>PhD, Computer Science</strong>
+          <p>RMIT University, 2023–present</p>
+        </li>
 
-      <section id="teaching">
-        <h2>Teaching</h2>
-        <ul class="standard-list">
-          <li>
-            <strong>Tutor &mdash; Introduction to Information Systems (INFS7900)</strong><br>
-            <span class="list-meta">Semester 1, 2026</span>
-            <span class="list-meta">The University of Queensland</span>
-          </li>
-        </ul>
-      </section>
+        <li>
+          <strong>Bachelor of Computer Science (Hons)</strong>
+          <p>RMIT University, 2022</p>
+        </li>
 
-      <section id="service">
-        <h2>Service</h2>
-        <ul class="standard-list">
-          <li>Reviewer for KDD 2024</li>
-        </ul>
-      </section>
+        <li>
+          <strong>Bachelor of Computer Science</strong>
+          <p>RMIT University, 2019–2021</p>
+        </li>
+      </ul>
 
-      <section id="awards">
-        <h2>Honours & Awards</h2>
-        <ul class="standard-list">
-          <li>
-              <strong>CSIRO Data61 Top-Up Scholarship</strong><br>
-              <span class="list-meta">2023 &ndash; 2026</span>
-          </li>
-          <li>
-              <strong>RMIT Vice-Chancellor's PhD Scholarship</strong><br>
-              <span class="list-meta">2023 &ndash; 2026</span>
-          </li>
-          <li>
-              <strong>RMIT Vice-Chancellor's List for Academic Excellence</strong><br>
-              <span class="list-meta">2021, 2022</span>
-          </li>
-        </ul>
-      </section>
-      
-      <footer>
-        <p>&copy; 2026 Ge Lee &nbsp;&middot;&nbsp; Last updated in March 2026</p>
-      </footer>
-    </main>
+      <h2>Awards</h2>
+
+      <ul class="entries">
+        <li>CSIRO Data61 Top-Up Scholarship, 2023</li>
+        <li>RMIT Vice-Chancellor's PhD Scholarship, 2023</li>
+        <li>RMIT Vice-Chancellor's List for Academic Excellence, 2021 & 2022</li>
+      </ul>
+    </section>
+
+    <section class="panel panel-service">
+      <h1>Teaching</h1>
+
+      <ul class="entries">
+        <li>
+          <strong>Introduction to Information Systems (INFS7900)</strong>
+          <p>Casual Academic, The University of Queensland, Sem 1 2026</p>
+        </li>
+      </ul>
+
+      <h2>Service</h2>
+
+      <ul class="entries">
+        <li>Reviewer, KDD 2024</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      2026.06
+    </footer>
+  </main>
+
+  <div class="modal modal-image" id="image-modal" aria-hidden="true">
+    <button class="modal-backdrop" type="button" aria-label="Close image"></button>
+
+    <div class="modal-frame image-frame" role="dialog" aria-modal="true" aria-label="Paper image">
+      <button class="modal-close" type="button" aria-label="Close image">×</button>
+      <img id="image-modal-img" src="" alt="">
+    </div>
   </div>
 
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">
-    <i class="fa-solid fa-chevron-up"></i>
-  </button>
+  <div class="modal modal-video" id="video-modal" aria-hidden="true">
+    <button class="modal-backdrop" type="button" aria-label="Close video"></button>
+
+    <div class="modal-frame video-frame" role="dialog" aria-modal="true" aria-label="Paper video">
+      <button class="modal-close" type="button" aria-label="Close video">×</button>
+      <iframe
+        id="video-iframe"
+        title="Paper video"
+        src=""
+        referrerpolicy="strict-origin-when-cross-origin"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('section');
-      const navLinks = document.querySelectorAll('.sidebar-nav a');
-      
-      const observerOptions = {
-        root: null,
-        rootMargin: '-20% 0px -70% 0px',
-        threshold: 0
-      };
+    const previewToggles = [...document.querySelectorAll(".preview-toggle")];
+    const expandAllButton = document.querySelector("#expand-all-previews");
+    const hideAllButton = document.querySelector("#hide-all-previews");
+    const allDetailsSeparator = document.querySelector("#all-details-separator");
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const currentId = entry.target.getAttribute('id');
-            
-            navLinks.forEach(link => {
-              link.classList.remove('active');
-              if (link.getAttribute('href') === `#${currentId}`) {
-                link.classList.add('active');
-                
-                if (window.innerWidth <= 768) {
-                  link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                }
-              }
-            });
-          }
-        });
-      }, observerOptions);
+    const imageModal = document.querySelector("#image-modal");
+    const imageModalImg = document.querySelector("#image-modal-img");
+    const videoModal = document.querySelector("#video-modal");
+    const videoIframe = document.querySelector("#video-iframe");
 
-      sections.forEach(section => {
-        observer.observe(section);
+    const isWebOrigin = location.protocol === "http:" || location.protocol === "https:";
+
+    const updatePreviewControls = () => {
+      const expandedCount = previewToggles.filter((toggle) => toggle.checked).length;
+      const someExpanded = expandedCount > 0;
+      const allExpanded = expandedCount === previewToggles.length;
+
+      expandAllButton.hidden = allExpanded;
+      hideAllButton.hidden = !someExpanded;
+      allDetailsSeparator.hidden = !(someExpanded && !allExpanded);
+    };
+
+    const setAllPreviews = (checked) => {
+      previewToggles.forEach((toggle) => {
+        toggle.checked = checked;
       });
 
-      window.addEventListener('scroll', () => {
-        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
-          navLinks.forEach(link => link.classList.remove('active'));
-          const lastLink = navLinks[navLinks.length - 1];
-          lastLink.classList.add('active');
-          
-          if (window.innerWidth <= 768) {
-            lastLink.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-          }
-        }
-      });
+      updatePreviewControls();
+    };
 
-      const backToTopBtn = document.getElementById('backToTop');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-          backToTopBtn.classList.add('show');
-        } else {
-          backToTopBtn.classList.remove('show');
-        }
-      });
+    const buildVideoUrl = (videoId) => {
+      const url = new URL(`https://www.youtube.com/embed/${videoId}`);
 
-      backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+      url.searchParams.set("autoplay", "1");
+      url.searchParams.set("rel", "0");
+      url.searchParams.set("modestbranding", "1");
+
+      if (isWebOrigin) {
+        url.searchParams.set("origin", location.origin);
+      }
+
+      return url.toString();
+    };
+
+    const openModal = (modal) => {
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("has-modal");
+    };
+
+    const closeImage = () => {
+      imageModal.classList.remove("is-open");
+      imageModal.setAttribute("aria-hidden", "true");
+      imageModalImg.src = "";
+      imageModalImg.alt = "";
+      document.body.classList.remove("has-modal");
+    };
+
+    const closeVideo = () => {
+      videoModal.classList.remove("is-open");
+      videoModal.setAttribute("aria-hidden", "true");
+      videoIframe.src = "";
+      document.body.classList.remove("has-modal");
+    };
+
+    expandAllButton.addEventListener("click", () => setAllPreviews(true));
+    hideAllButton.addEventListener("click", () => setAllPreviews(false));
+    previewToggles.forEach((toggle) => toggle.addEventListener("change", updatePreviewControls));
+
+    document.querySelectorAll(".image-thumb").forEach((button) => {
+      button.addEventListener("click", () => {
+        const image = button.querySelector("img");
+
+        imageModalImg.src = button.dataset.image;
+        imageModalImg.alt = image.alt;
+        openModal(imageModal);
       });
     });
-  </script>
 
-  <script data-goatcounter="https://gelee-cs.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    document.querySelectorAll(".video-thumb").forEach((button) => {
+      button.addEventListener("click", () => {
+        videoIframe.src = buildVideoUrl(button.dataset.videoId);
+        openModal(videoModal);
+      });
+    });
+
+    document.querySelectorAll("#image-modal .modal-backdrop, #image-modal .modal-close").forEach((button) => {
+      button.addEventListener("click", closeImage);
+    });
+
+    document.querySelectorAll("#video-modal .modal-backdrop, #video-modal .modal-close").forEach((button) => {
+      button.addEventListener("click", closeVideo);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") {
+        return;
+      }
+
+      if (imageModal.classList.contains("is-open")) {
+        closeImage();
+      }
+
+      if (videoModal.classList.contains("is-open")) {
+        closeVideo();
+      }
+    });
+
+    updatePreviewControls();
+  </script>
 </body>
 </html>
